@@ -23,6 +23,22 @@ const closeModal = function () {
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal)
 
+// HOW TO HANDLE KEYPRESS EVENTS
+
+// KEYUP - when finger goes away from key
+
+// KEYPRESS - while holding key pressed
+
+// KEYDOWN - when pressing down key
+
+document.addEventListener('keydown', function (e) {
+    //passing in the e or eventObject as a parameter
+    if(e.key === 'Escape'){
+        if (!modal.classList.contains('hidden')) {
+            closeModal();
+        }
+    }
+});
 
 
 
